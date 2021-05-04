@@ -1,15 +1,19 @@
 peline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                sh 'echo "helloooooo!!!!"'
-            }
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
         }
+      }
     }
-    post {
-        always {
-            sh "echo 'dummy !!!'"
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
         }
+      }
     }
+  }
 }
